@@ -125,6 +125,13 @@ public class LePendu {
 		return false;
 	}
 	
+	public static int nbPoints(int essais)
+	{
+		int points = 500;
+		points = points - (10 * (10 - essais));
+		return points;
+	}
+	
 	public static void main(String[] args) {
 		String word = enterWord();
 		String aDeviner = createADeviner(word);
@@ -168,6 +175,7 @@ public class LePendu {
 		else
 		{
 			System.out.println("Success !");
+			System.out.println("Vous avez " + nbPoints(essais) + " points !");
 		}
 	}
 
